@@ -562,6 +562,7 @@ form.example::after {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
+	max-width: 100 px
   }
 }
 .container > .navbar-header,
