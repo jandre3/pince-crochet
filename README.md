@@ -1,4 +1,4 @@
-# Inventaire-pince-a-crochet
+# Atlas des utiliations de la pinceà crochet
 Cette page propose une inventaire des édifices qui utilisent la technique de la pince à crochet. 
 
 
