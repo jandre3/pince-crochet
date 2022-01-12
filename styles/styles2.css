@@ -5,7 +5,6 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
 }
 
 .inputs, .inputs_2 {
@@ -1495,4 +1494,11 @@ select.form-control[multiple] {
 #contactForm .form-control {
     font-weight: 500;
     height: auto
+<<<<<<< Updated upstream
 }
+=======
+}
+
+
+
+>>>>>>> Stashed changes
