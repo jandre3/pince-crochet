@@ -7,55 +7,6 @@ html,body
     padding: 0px;
 }
 
-.inputs, .inputs_2 {
-	width: 110px;
-	position: fixed;
-	right: 0px;
-	top: 110px;
-	z-index: 1;
-	background-color: #eee;
-	flex-wrap: wrap;
-	margin: 5px;
-	padding: 5px;
-	border: solid;
-	border-width: thin; 
-	border-radius: 5%;
-	text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal; 
-	display: flex;
-	}
-	
-.inputs_2 {
-	top: 350px;	
-}
-	
-.input-text{
-	font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-	font-size: 14px;
-	color: #777;
-	flex-wrap: wrap;
-}
-
-
-@media (max-width: 500px) {
-  .inputs, .inputs_2 {
-    position: fixed;
-	right: 0px;
-	top: 268px;
-	max-width: 110px;
-	min-width: 90px;
-  }
-  .inputs_2 {
-    position: fixed;
-	right: 0px;
-	top: 510px;
-  }
-  
-}
-
-
 
 #mapcontainer {
     display: flex;
@@ -91,7 +42,14 @@ h1 {
 	border-bottom: solid;
 	border-width: thin;
 	vertical-align: center;
-	
+}
+
+h3 {
+	text-align: center;
+}
+
+.modal-title {
+	text-align: center;
 }
 
 h4 {
@@ -163,7 +121,7 @@ a:hover {
 }
 
 /* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
+.sidenav a, .dropdown-btn, .btn-lateral {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 18px;
@@ -178,7 +136,7 @@ a:hover {
 }
 
 /* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
+.sidenav a:hover, .dropdown-btn:hover, .btn-lateral:hover {
   color: #f1f1f1;
 }
 
@@ -304,6 +262,55 @@ form.example::after {
 }
 /* END SCALE BAR*/
 
+
+/* Checkboxes text */
+.inputs, .inputs_2 {
+	width: 110px;
+	position: fixed;
+	right: 0px;
+	top: 110px;
+	z-index: 1;
+	background-color: #eee;
+	flex-wrap: wrap;
+	margin: 5px;
+	padding: 5px;
+	border: solid;
+	border-width: thin; 
+	border-radius: 5%;
+	text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal; 
+	display: flex;
+	}
+	
+.inputs_2 {
+	top: 350px;	
+}
+	
+.input-text{
+	font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+	font-size: 14px;
+	color: #777;
+	flex-wrap: wrap;
+}
+
+
+@media (max-width: 500px) {
+  .inputs, .inputs_2 {
+    position: fixed;
+	right: 0px;
+	top: 268px;
+	max-width: 110px;
+	min-width: 90px;
+  }
+  .inputs_2 {
+    position: fixed;
+	right: 0px;
+	top: 510px;
+  }
+  
+}
 
 
 
@@ -1494,11 +1501,16 @@ select.form-control[multiple] {
 #contactForm .form-control {
     font-weight: 500;
     height: auto
-<<<<<<< Updated upstream
-}
-=======
 }
 
+.btn .btn-default {
+    background-color: darkgray;
+	z-index:102;
+	border: solid;
+	border-width: thin;
+	color: red;
+}
 
-
->>>>>>> Stashed changes
+.modal-body {
+    text-align: justify;
+}

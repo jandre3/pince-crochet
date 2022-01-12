@@ -1,0 +1,6 @@
+Hi, 
+I try to add the cluster. 
+
+My whole code is available here: https://github.com/jandre3/pince-crochet 
+
+Thank you for your advices. Sorry if the question is very easy, I'm new in JS.

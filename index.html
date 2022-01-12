@@ -6,41 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Jerome Andre">
 
-
-
-		
 		<!-- Load personnal CSS styles -->
-        <link rel="stylesheet" href="styles/bootstrap.css">
-		   <link rel="stylesheet" href="styles/styles2.css">
-		   
+		<link rel="stylesheet" href="styles/bootstrap.css">
+		<link rel="stylesheet" href="styles/styles2.css">   
 
-        <!-- Load leaflet elements -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+		<!-- Load leaflet elements -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
    
-   <!-- Load Marker Cluster element -->
-   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/"> </script>
+		<!-- Load Marker Cluster element -->
+		<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/"> </script>
 
-
+		<!-- loads files for SCALE BAR -->	
+		<script src="scripts/L.Control.BetterScale.js"></script>
+		<link rel="stylesheet" href="styles/L.Control.BetterScale.css" />
 	
-	<!-- loads files for SCALE BAR -->	
-	<script src="scripts/L.Control.BetterScale.js"></script>
-	<link rel="stylesheet" href="styles/L.Control.BetterScale.css" />
-	
-
-
 		<!-- loads files for Cluster -->	
-	<link rel="stylesheet" href="styles/MarkerCluster.css" />
-	<link rel="stylesheet" href="styles/MarkerCluster.Default.css" />
-	<script src="scripts/leaflet.markercluster-src.js"></script>
+		<link rel="stylesheet" href="styles/MarkerCluster.css" />
+		<link rel="stylesheet" href="styles/MarkerCluster.Default.css" />
+		<script src="scripts/leaflet.markercluster-src.js"></script>
 
+	</head>
 
-    </head>
-
-    <body>
+<body>
 <h1>Inventaire des utilisations de la pince à crochet</h1>
 
 <nav class="navbar navbar-default ">
@@ -53,16 +41,19 @@
             <div class="modal-dialog modal-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Bienvenue sur cette page </h4>
+                       
+                        <h4 class="modal-title" id="myModalLabel">Bienvenue sur ce site qui recense les occurences de l'utilisation de la pince à crochet dans les constructions romaines</h3>
                     </div>
                     <div class="modal-body">
-				
-                    TEXTE DU MODAL A COMPLETER
-					Bienvenue
-                    </div>
+					Pour décvourir la pince à crochet et comprendre comment fonctionne cette technique, voir l'onglet <a href="about.html" style="color:blue;">A propos</a>.
+					</br></br>
+					La <a href="index.html" style="color:blue;">carte</a> affiche les différents sites inventoriés. Les menus à droite permettent de les filtrer par date de construction ou par type de monument.
+					</br></br>L'onglet <a href="sites.html" style="color:blue;">Sites</a> liste les différents édifices répértoriés, par provinces puis par ordre alphabétique. Pour chacun sont indiqués les principales caractéristiques, les mesures des mortaises ainsi que la bibliographie complète.
+                    </br></br>
+					N'hésitez à laisser un commentaire ou à signaler un site qui nous aurait échappé... <a href="contact.html" style="color:blue;">Contact</a>
+					</div>
                     <div class="modal-footer">
-                        <label ><input class="dont" type="checkbox" name="dismiss"> Ne plus afficher</label><br />
+                       <!-- <label ><input class="dont" type="checkbox" name="dismiss"> Ne plus afficher</label><br /> -->
                         <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
                     </div>
                 </div>
@@ -78,8 +69,8 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.html">Carte</a></li>
       <li><a href="sites.html">Sites</a></li>
-      <li><a href="bibliography.html">Bibliograhie</a></li>
 	  <li><a href="about.html">A propos</a></li>
+	  <li><a href="bibliography.html">Bibliograhie</a></li>
 	  <li><a href="contact.html">Contact</a></li>
 	  <li class="navbar-nav pull-right"><a href="https://github.com/jandre3/pince-crochet" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
     </ul>
