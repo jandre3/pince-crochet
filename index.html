@@ -7,8 +7,12 @@
         <meta name="author" content="Jerome Andre">
 
         <title>Inventaire des attestation de la pince à crochet</title>
-         <!-- Load personnal CSS styles -->
-        <link rel="stylesheet" href="styles/styles2.css">
+
+		
+		<!-- Load personnal CSS styles -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
+		   <link rel="stylesheet" href="styles/styles2.css">
+		   
 
         <!-- Load leaflet elements -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -19,32 +23,58 @@
    crossorigin=""></script>
    
    <!-- Load Marker Cluster element -->
-   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/"</script>
+   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/"> </script>
 
-	<!-- loads jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css">
-	
-	<!-- loads Bootstrap -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	
 
-	<script src="jquery.uniform.js"></script>
-	<script src="UniformControl.js"></script>
 	
 	<!-- loads files for SCALE BAR -->	
 	<script src="scripts/L.Control.BetterScale.js"></script>
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="styles/L.Control.BetterScale.css" />
 	
 
-       
+
+		<!-- loads files for Cluster -->	
+	<link rel="stylesheet" href="styles/MarkerCluster.css" />
+	<link rel="stylesheet" href="styles/MarkerCluster.Default.css" />
+	<script src="scripts/leaflet.markercluster-src.js"></script>
+
+
     </head>
 
     <body>
 <h1>Inventaire des utilisations de la pince à crochet</h1>
 
 <nav class="navbar navbar-default ">
+
+<body>
+
+ <!-- MODAL -->
+      <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-dialog modal-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Bienvenue sur cette page </h4>
+                    </div>
+                    <div class="modal-body">
+				
+                    TEXTE DU MODAL A COMPLETER
+                    </div>
+                    <div class="modal-footer">
+                        <label ><input class="dont" type="checkbox" name="dismiss"> Ne plus afficher</label><br />
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+	
+<h1>Inventaire des utilisations de la pince à crochet</h1>
+
+    <!-- Fixed navbar -->
+   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.html">Carte</a></li>
@@ -65,7 +95,7 @@
 <!-- Legende et filtres-->
 <div class="inputs" id="year">
 <h4>&nbsp;Filtrer par date&nbsp;</h4>
-  <input type="checkbox" class="year" "red" name="-150" value="-150" checked="true" style="accent-color:black;">
+  <input type="checkbox" class="year" name="-150" value="-150" checked="true" style="accent-color:black;">
   <label class="input-text" for="-150">-150 à -100</label>  
     <input type="checkbox" class="year" name="-100" value="-100" checked="true" style="accent-color:red;">
   <label class="input-text" for="-100">-100 à -30</label>  
@@ -101,6 +131,7 @@
   <label class="input-text" for="porte">porte &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; </label>
   <input type="checkbox" class="event-type" name="autre" value="autre" checked="true">
   <label class="input-text" for="autre">autre &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; </label>
+<<<<<<< Updated upstream
 </div>
 <!-- Checkbox -->
 
@@ -111,19 +142,42 @@
   
   
   
-  
-</div>
+
 
 			
- 	<!-- Load external JavaScript -->
-		<script src="scripts/index.js"></script> 
-	    <script src="scripts/listeSites2.js"></script> 
+ 	
+	<!-- Load personnal Jquery and Bootstrap -->		
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-	
-	<script>
- 
-</script>		
-			
+
 		
-        
-    </body>
+	<!-- Load personnal JavaScript !!! ne pas changer l'ordre!!!!!-->
+		<script src="scripts/index.js"></script>
+		<script src="scripts/listeSites2.js"></script>
+		
+	<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+</script>
+
+		<script type="text/javascript">
+      function centerModal() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(window).height() - $dialog.height()) / 2;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}
+
+$('.modal').on('show.bs.modal', centerModal);
+$(window).on("resize", function () {
+    $('.modal:visible').each(centerModal);
+});
+</script>
+
+
+</body>
+</html>
