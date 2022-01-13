@@ -70,69 +70,84 @@ const jsontest ={
 ]
 };
 
+// Prepare the Marker Cluster Group
+const mcg = L.markerClusterGroup(
+	{	disableClusteringAtZoom: 7,
+		maxClusterRadius: 60,
+			polygonOptions: {
+				fillColor: 'none',
+				color: '#1b2557',
+				weight: 0,
+				opacity: 1,
+				fillOpacity: 0.5
+				}
+}).addTo(map);
 
-const geojsonLayer = L.geoJSON(null,{
-	filter: (feature) => {
-  	const isYearChecked = checkboxStates.years.includes(feature.properties.year)
+
+
+new L.MarkerClusterGroup({showCoverageOnHover: false });
+const geojsonLayer = L.geoJSON(null, {
+  filter: (feature) => {
+    const isYearChecked = checkboxStates.years.includes(feature.properties.year)
     const isEventTypeChecked = checkboxStates.eventTypes.includes(feature.properties.eventType)
     return isYearChecked && isEventTypeChecked //only true if both are true
   },
-   style: function getcolor(feature) {
-                var year = feature.properties.year;
-                if (year <= -150) {
-                    return {
-                        color: "black"
-                    };
-                } else if (year >= -100 && year < -50) {
-                    return {
-                        color: "red"
-                    };
-                } else if (year >= -50 && year < -31) {
-                    return {
-                        color: "orange"
-                    };
-                } else if (year >= -30 && year < -1) {
-                    return {
-                        color: "yellow"
-                    };
-                } else if (year >= 1 && year < 15) {
-                    return {
-                        color: "yellow"
-                    };
-                } else if (year >= 15 && year < 50) {
-                    return {
-                        color: "lightgreen"
-                    };
-                } else if (year >= 50 && year < 100) {
-                    return {
-                        color: "green"
-                    };
-                } else if (year >= 100 && year < 150) {
-                    return {
-                        color: "lightblue"
-                    };
-                } else if (year >= 150 && year < 200) {
-                    return {
-                        color: "blue"
-                    };
-                } else if (year >= 200 && year < 250) {
-                    return {
-                        color: "darkblue"
-                    };
-                } else if (year >= 250) {
-                    return {
-                        color: "purple"
-                    };
-                } else if ((year == 0)) {
-                    return {
-                        color: "gray"
-                    };
-                }
-            },
+  style: function getcolor(feature) {
+    var year = feature.properties.year;
+    if (year <= -150) {
+      return {
+        color: "black"
+      };
+    } else if (year >= -100 && year < -50) {
+      return {
+        color: "red"
+      };
+    } else if (year >= -50 && year < -31) {
+      return {
+        color: "orange"
+      };
+    } else if (year >= -30 && year < -1) {
+      return {
+        color: "yellow"
+      };
+    } else if (year >= 1 && year < 15) {
+      return {
+        color: "yellow"
+      };
+    } else if (year >= 15 && year < 50) {
+      return {
+        color: "lightgreen"
+      };
+    } else if (year >= 50 && year < 100) {
+      return {
+        color: "green"
+      };
+    } else if (year >= 100 && year < 150) {
+      return {
+        color: "lightblue"
+      };
+    } else if (year >= 150 && year < 200) {
+      return {
+        color: "blue"
+      };
+    } else if (year >= 200 && year < 250) {
+      return {
+        color: "darkblue"
+      };
+    } else if (year >= 250) {
+      return {
+        color: "purple"
+      };
+    } else if ((year == 0)) {
+      return {
+        color: "gray"
+      };
+    }
+  },
   pointToLayer: function(feature, latlng) {
     return L.circleMarker(latlng, {
-      radius: 8,
-      weight: 2,
+      radius: 10,
+      weight: 3,
       opacity: 1,
       fillOpacity: 0.7
 
@@ -140,56 +155,56 @@ const geojsonLayer = L.geoJSON(null,{
   },
   // bind Popup to each feature
   onEachFeature: function(feature, layer) {
-	  // variable pour le texte du popup  
-	  var popupText = "<b>Site:</b> " + feature.properties.field_2
-	  + "<br><b>Type:</b> " + feature.properties.eventType
-	  // dans l'idéal il faudrait ajouter un lien qui pointe vers
-	 //la page site, sous le § du site directement peut-être en construisant un lien
-	 //quand la page sites est finie: ajouter la ligne suivante dans le href
-	 //sites.html#" + feature.properties.field_2 " 
-	  + "<br><a href=''>Plus d'info</a>";
-	 
-      layer.bindPopup(popupText, {
-		closeButton: true,
-        offset: L.point(0, -10)
-		   });
-      layer.on('click', function() {
-        layer.openPopup();
-      });
-    },
-}).addTo(map);
+    // variable pour le texte du popup  
+    var popupText = "<b>Site:</b> " + feature.properties.field_2 +
+      "<br><b>Type:</b> " + feature.properties.eventType
+      // dans l'idéal il faudrait ajouter un lien qui pointe vers
+      //la page site, sous le § du site directement peut-être en construisant un lien
+      //quand la page sites est finie: ajouter la ligne suivante dans le href
+      //sites.html#" + feature.properties.field_2 " 
+      +
+      "<br><a href=''>Plus d'info</a>";
+
+    layer.bindPopup(popupText, {
+      closeButton: true,
+      offset: L.point(0, -10)
+    });
+    layer.on('click', function() {
+      layer.openPopup();
+    });
+  },
+})//.addTo(map); // Do not add the GeoJSON Layer Group to the map, it is used only as a converter from GeoJSON data into Leaflet Layers
 
 function updateCheckboxStates() {
-	checkboxStates = {
-  	years: [],
+  checkboxStates = {
+    years: [],
     eventTypes: []
   }
-  
-	for (let input of document.querySelectorAll('input')) {
-  	if(input.checked) {
-    	switch (input.className) {
-      	case 'event-type': checkboxStates.eventTypes.push(input.value); break
-        case 'year': checkboxStates.years.push(input.value); break
+
+  for (let input of document.querySelectorAll('input')) {
+    if (input.checked) {
+      switch (input.className) {
+        case 'event-type':
+          checkboxStates.eventTypes.push(input.value);
+          break
+        case 'year':
+          checkboxStates.years.push(input.value);
+          break
       }
     }
   }
 }
 
-
 for (let input of document.querySelectorAll('input')) {
   //Listen to 'change' event of all inputs
   input.onchange = (e) => {
+  	mcg.clearLayers()
     geojsonLayer.clearLayers()
-  	updateCheckboxStates()
-    geojsonLayer.addData(jsontest)   
+    updateCheckboxStates()
+    geojsonLayer.addData(jsontest).addTo(mcg)
   }
 }
 
-
-
-
 /****** INIT ******/
 updateCheckboxStates()
-geojsonLayer.addData(jsontest)
-
-
+geojsonLayer.addData(jsontest).addTo(mcg)

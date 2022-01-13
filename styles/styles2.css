@@ -28,6 +28,16 @@ html,body
 	top: 268px;
   }
 }
+.marker-cluster-small {
+  background-color: #de6a72 !important;
+  opacity: 0.7;
+}
+
+.marker-cluster-small div {
+  background-color: #C80815 !important;
+  opacity: 0.7;
+  color: black !important;
+}
 
 
 h1 {
@@ -60,8 +70,7 @@ h4 {
     padding: 0px;
 	padding-bottom: 4px;
 	margin: 0;
-	vertical-align: center;
-	
+	vertical-align: center;	
 }
 
 
@@ -82,7 +91,6 @@ body {
 	margin-left: 20px;
 }
 
-
  a, a:hover, a:focus, a:active {
      text-decoration: none;
      color: inherit;
@@ -91,14 +99,15 @@ body {
     text-decoration: none;
     color: black;
 }
+
 a:hover {
     text-decoration: underline;
 }
 
-  ul li: last - of -type > a {
+ul li: last - of -type > a {
        display: block;
        text - align: right;
-    }
+}
 
 /* POUR LA BARRE NAVIGATION LATERALE,  full height */
 .sidenav {
@@ -110,7 +119,6 @@ a:hover {
   left: 0;
   background-color: lightgray;
   overflow-x: hidden;
-  padding-top: 10px;
 
 }
 
@@ -308,8 +316,7 @@ form.example::after {
     position: fixed;
 	right: 0px;
 	top: 510px;
-  }
-  
+  } 
 }
 
 

@@ -21,9 +21,10 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li><a href="index.html">Carte</a></li>
-      <li class="active"><a href="sites.html">Sites</a></li>
-	  <li><a href="about.html">A propos</a></li>
-      <li><a href="bibliography.html">Bibliograhie</a></li>
+      <li><a href="sites.html">Sites</a></li>
+      
+	  <li class="active"><a href="about.html">A propos</a></li>
+	  <li><a href="bibliography.html">Bibliograhie</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -33,56 +34,17 @@
 
  <div class="sidenav">
 	 <p class="sidenav-titel">Liste des sites <br> par provinces</p>
-  <button class="dropdown-btn"><a href="sites.html#Italie">Italie <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+  <button class="btn-lateral" ><a href="about.html#Germanie supérieure">Histoire</a>
   </button>
-  <div class="dropdown-container">
-    <a href="">Rome</a>
-    <a href="#">essai 2</a>
-    <a href="#">essai 3</a>
-  </div>
-	   <button class="dropdown-btn"><a href="sites.html#Narbonnaise">Narbonnaise <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+  
+<button class="btn-lateral" ><a href="about.html#Germanie supérieure">Fonctionnement</a>
   </button>
-  <div class="dropdown-container">
-    <a href="">Site 1</a>
-    <a href="#">essai 2</a>
-    <a href="#">essai 3</a>
-  </div>
-	   <button class="dropdown-btn"><a href="sites.html#Germanie supérieure">Aquitaine <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-    
+  
+  <button class="btn-lateral" ><a href="about.html#Germanie supérieure">Histoire</a>
   </button>
-  <div class="dropdown-container">
-    <a href="">Site 1</a>
-    <a href="#">essai 2</a>
-    <a href="#">essai 3</a>
-  </div>
-  <button class="dropdown-btn"><a href="sites.html#Germanie supérieure">Germanie sup. <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+  
+  <button class="btn-lateral" ><a href="about.html#Germanie supérieure">Histoire</a>
   </button>
-  <div class="dropdown-container">
-    <a href="">Site 1</a>
-    <a href="#">essai 2</a>
-    <a href="#">essai 3</a>
-  </div>
-    <button class="dropdown-btn"><a href="sites.html#Germanie supérieure">Germanie sup. <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-  </button>
-  <div class="dropdown-container">
-    <a href="">Site 1</a>
-    <a href="#">essai 2</a>
-    <a href="#">essai 3</a>
-  </div>
-    <button class="dropdown-btn"><a href="sites.html#Germanie supérieure">Germanie inf. <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-  </button>
-  <div class="dropdown-container">
-    <a href="">Site 1</a>
-    <a href="#">essai 2</a>
-    <a href="#">essai 3</a>
-  </div>
-    <button class="dropdown-btn"><a href="sites.html#Germanie supérieure">Belgique <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-  </button>
-  <div class="dropdown-container">
-    <a href="">Site 1</a>
-    <a href="#">essai 2</a>
-    <a href="#">essai 3</a>
-  </div>
  
   <!-- The search form -->
 <form class="example" action="action_page.php">
@@ -94,13 +56,12 @@
 
  <!-- DIV POUR LE TEXTE ET LA LISTE DES SITES -->
 <div style="margin-left: 220px">
-<h2 id="Italie">Italie</h2>
 <p>
 "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
 
 </p>
 <div>
-<h2 id="Narbonnaise">Narbonnaise</h2>
+<h3 id="Narbonnaise">Arles et aussi les autressssssfdasdfasfdasdfa </h3>
 </div>
 
 <p>
@@ -109,7 +70,7 @@
 </p>
 
 <div>
-<h2 id="Aquitaine">Aquitaine</h2>
+<h3 id="Germanie supérieure">Germanie supérieure</h3>
 </div>
 
 <p>
