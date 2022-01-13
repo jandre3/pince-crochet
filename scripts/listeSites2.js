@@ -7,7 +7,7 @@ const jsontest ={
 { "type": "Feature", "properties": { "field_1": "Temple du Donon", "field_2": "Alsace", "eventType": "temple", "field_4": 48.512921, "field_5": 7.165208, "year": "0" }, "geometry": { "type": "Point", "coordinates": [ 7.165208, 48.512921 ] } },
 { "type": "Feature", "properties": { "field_1": "Sanctuaire d'Artémis, édifice 4", "field_2": "Amarynthos", "eventType": "autre", "field_4": 38.386943, "field_5": 23.909185, "year": "-150" }, "geometry": { "type": "Point", "coordinates": [ 23.909185, 38.386943 ] } },
 { "type": "Feature", "properties": { "field_1": "Pont", "field_2": "Ambrussum", "eventType": "autre", "field_4": 43.717236, "field_5": 4.151932, "year": "0" }, "geometry": { "type": "Point", "coordinates": [ 4.151932, 43.717236 ] } },
-{ "type": "Feature", "properties": { "field_1": "Amphéthéâtre", "field_2": "Arles", "eventType": "spectacle", "field_4": 43.678, "field_5": 4.630942, "year": "50"}, "geometry": { "type": "Point", "coordinates": [ 4.630942, 43.678 ] } },
+{ "type": "Feature", "properties": { "field_1": "Amphithéâtre", "field_2": "Arles", "eventType": "spectacle", "field_4": 43.678, "field_5": 4.630942, "year": "50"}, "geometry": { "type": "Point", "coordinates": [ 4.630942, 43.678 ] } },
 { "type": "Feature", "properties": { "field_1": "Théâtre", "field_2": "Arles", "eventType": "spectacle", "field_4": 43.676533, "field_5": 4.629858, "year": "-30" }, "geometry": { "type": "Point", "coordinates": [ 4.629858, 43.676533 ] } },
 { "type": "Feature", "properties": { "field_1": "Bâtiment sous l'église des prêcheurs", "field_2": "Arles", "eventType": "autre", "field_4": 43.67886, "field_5": 4.626115, "year": "-100" }, "geometry": { "type": "Point", "coordinates": [ 4.626115, 43.67886 ] } },
 { "type": "Feature", "properties": { "field_1": "?", "field_2": "Augsburg", "eventType": "?", "field_4": 48.369833, "field_5": 10.898533, "year": "0" }, "geometry": { "type": "Point", "coordinates": [ 10.898533, 48.369833 ] } },
@@ -73,7 +73,7 @@ const jsontest ={
 
 // Prepare the Marker Cluster Group
 const mcg = L.markerClusterGroup(
-	{	disableClusteringAtZoom: 7,
+	{	disableClusteringAtZoom: 8, //!!! IMPORTANT défini le niveau maximum de la fonction cluster
 		maxClusterRadius: 60,
 			polygonOptions: {
 				fillColor: 'none',
