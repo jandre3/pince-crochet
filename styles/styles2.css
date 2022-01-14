@@ -7,6 +7,17 @@ html,body
     padding: 0px;
 }
 
+p {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
 
 #mapcontainer {
     display: flex;
@@ -47,10 +58,6 @@ h3 {
 	text-align: center;
 }
 
-.modal-title {
-	text-align: center;
-}
-
 h4 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -60,19 +67,6 @@ h4 {
 	padding-bottom: 4px;
 	margin: 0;
 	vertical-align: center;	
-}
-
-
-p {
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-}
-
-body {
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
 }
 
 .biblio-body{
@@ -281,7 +275,7 @@ form.example::after {
 	}
 	
 .inputs_2 {
-	top: 350px;	
+	top: 365px;	
 }
 	
 .input-text{
@@ -304,7 +298,7 @@ form.example::after {
   .inputs_2 {
     position: fixed;
 	right: 0px;
-	top: 510px;
+	top: 530px;
   } 
 }
 
@@ -1516,4 +1510,8 @@ select.form-control[multiple] {
 
 .modal-body {
     text-align: justify;
+}
+
+.modal-title {
+	text-align: center;
 }

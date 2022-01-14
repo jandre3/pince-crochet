@@ -22,7 +22,6 @@
     <ul class="nav navbar-nav">
       <li><a href="index.html">Carte</a></li>
       <li><a href="sites.html">Sites</a></li>
-      
 	  <li class="active"><a href="about.html">A propos</a></li>
 	  <li><a href="bibliography.html">Bibliograhie</a></li>
       <li><a href="contact.html">Contact</a></li>

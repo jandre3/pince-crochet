@@ -3,6 +3,7 @@ let checkboxStates
 const jsontest ={
 "type":"FeatureCollection",
 "features": [
+{ "type": "Feature", "properties": { "field_1": "Temple d'Apollon", "field_2": "Delphes", "eventType": "temple", "field_4": 43.528819, "field_5": 5.447192, "year": "-150" }, "geometry": { "type": "Point", "coordinates": [ 22.501100, 38.4823225 ] } },
 { "type": "Feature", "properties": { "field_1": "Portique ?", "field_2": "Aix en Provence", "eventType": "?", "field_4": 43.528819, "field_5": 5.447192, "year": "50" }, "geometry": { "type": "Point", "coordinates": [ 5.447192, 43.528819 ] } },
 { "type": "Feature", "properties": { "field_1": "Temple du Donon", "field_2": "Alsace", "eventType": "temple", "field_4": 48.512921, "field_5": 7.165208, "year": "0" }, "geometry": { "type": "Point", "coordinates": [ 7.165208, 48.512921 ] } },
 { "type": "Feature", "properties": { "field_1": "Sanctuaire d'Artémis, édifice 4", "field_2": "Amarynthos", "eventType": "autre", "field_4": 38.386943, "field_5": 23.909185, "year": "-150" }, "geometry": { "type": "Point", "coordinates": [ 23.909185, 38.386943 ] } },
@@ -51,6 +52,7 @@ const jsontest ={
 { "type": "Feature", "properties": { "field_1": "Mausolée C de Fourches-Vieilles", "field_2": "Orange", "eventType": "funéraire", "field_4": 44.151015, "field_5": 4.805989, "year": "-30"}, "geometry": { "type": "Point", "coordinates": [ 4.805989, 44.151015 ] } },
 { "type": "Feature", "properties": { "field_1": "Temple jouxtant le théâtre", "field_2": "Orange", "eventType": "temple", "field_4": 44.135823, "field_5": 4.808858, "year": "150" }, "geometry": { "type": "Point", "coordinates": [ 4.808858, 44.135823 ] } },
 { "type": "Feature", "properties": { "field_1": "Tour de Vésone", "field_2": "Périgueux", "eventType": "autre", "field_4": 45.17946, "field_5": 0.714327, "year": "100" }, "geometry": { "type": "Point", "coordinates": [ 0.714327, 45.17946 ] } },
+{ "type": "Feature", "properties": { "field_1": "Blocs remployés dans le mur d'enceinte", "field_2": "Périgueux", "eventType": "autre", "field_4": 45.17946, "field_5": 0.714327, "year": "0" }, "geometry": { "type": "Point", "coordinates": [ 0.713038, 45.180676 ] } },
 { "type": "Feature", "properties": { "field_1": "Trophée de Panissars", "field_2": "Perthus", "eventType": "autre", "field_4": 42.454584, "field_5": 2.857312, "year": "-100" }, "geometry": { "type": "Point", "coordinates": [ 2.857312, 42.454584 ] } },
 { "type": "Feature", "properties": { "field_1": "Façade monumentale en arcade du sanctuaire", "field_2": "Pont-Sainte-Maxence", "eventType": "autre", "field_4": 49.304559, "field_5": 2.603842, "year": "150" }, "geometry": { "type": "Point", "coordinates": [ 2.603842, 49.304559 ] } },
 { "type": "Feature", "properties": { "field_1": "Temple de Mercure", "field_2": "Puy du Dôme", "eventType": "temple", "field_4": 45.7718, "field_5": 2.964476, "year": "0" }, "geometry": { "type": "Point", "coordinates": [ 2.964476, 45.7718 ] } },
@@ -73,7 +75,7 @@ const jsontest ={
 
 // Prepare the Marker Cluster Group
 const mcg = L.markerClusterGroup(
-	{	disableClusteringAtZoom: 8, //!!! IMPORTANT défini le niveau maximum de la fonction cluster
+	{	disableClusteringAtZoom: 7, //!!! IMPORTANT défini le niveau maximum de la fonction cluster
 		maxClusterRadius: 60,
 			polygonOptions: {
 				fillColor: 'none',
